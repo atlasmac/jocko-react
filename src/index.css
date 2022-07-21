@@ -1,13 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+}
+
+
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+}
+
+html {
+  font-size: 62.5%;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #adadad;
+}
+
+/* header start */
+
+.brand-logo-name-img {
+  width: 110px;
+  height: auto;
+  margin-left: 2rem;
+}
+
+.main-nav li>a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.main-nav li {
+  font-size: 2rem;
+}
+
+.main-nav ul {
+  display: flex;
+  margin-right: 2rem;
+  padding: 10px;
+  list-style: none;
+  gap: 3.5rem;
+}
+
+.main-header {
+  background-color: clear;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  transition: 0.6s;
+  z-index: 100000;
+  align-items: center;
+}
+
+.dropdown,
+.hamburger {
+  display: none;
+}
+
+.sticky {
+  width: 100%;
+  background: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.8));
+}
+
+/* home component */
+
+.main-section {
+  background-image: url("./images/shapingFar.JPG");
+
+  background-position: 0% 70%;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  /* aligning the text in the paralax */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.main-section div {
+  text-align: center;
+}
+
+.message {
+  color: white;
+  font-weight: bold;
+  font-size: 4rem;
+  text-align: center;
+  text-shadow: 10px;
+  color: rgba(255, 255, 255, 0.);
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+
+.brand-logo-name-img-main {
+  height: 100px;
+  display: none;
+  width: auto;
+}
+
+
+/* 2nd background */
+
+
+.lochsa {
+  background-image: url('./images/snyderLochsa.png');
+  background-position: 0% 30%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.lochsa h2 {
+  font-size: 5rem;
+  color: rgba(255, 255, 255);
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+.lochsa>div {
+  display: flex;
+  min-width: 300px;
+  max-width: 500px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 4rem
+}
+
+
+/* footer */
+
+footer {
+  margin: 0;
+  padding: .5rem 0;
+  color: black;
+  background-color: white;
+  font-weight: bold;
+}
+
+
+footer a {
+  color: black;
+}
+
+footer a:hover {
+  color: #adadad;
+}
+
+.footer-row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer-logos-ul{
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  padding: 0;
+  list-style: none;
+  font-size: 1.5rem;
+  margin: 5px;
+  font-size: 2rem;
+}
+
+.copyright {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 0;
+  margin: 0;
+
+}
+/* contact page */
+.contactPage {
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 0;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  font-size: 2rem;
+}
+
+.contactDiv h3 {
+  margin-top: 0;
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+}
+
+.contactDiv ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.contactDiv li {
+  margin-bottom: 2rem;
+}
+
+.contactDiv a {
+  text-decoration: none;
+  color: #000000;
+}
+.contactDiv a:hover {
+  color: #adadad;
+}
+
+.contactDiv i {
+  font-size: 2.5rem;
+  padding-right: 15px;
+}
+
+/* formerly contactPage section */
+.contact {
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.contact-icons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+
+/* form */
+input{
+  font-size: 2rem;
+}
+
+fieldset {
+  padding: 0;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contactPage fieldset div{
+  width: 49%;
+}
+
+
+label {
+  display: block;
+  align-items: center;
+  font-size: 2rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+
+.buttonDiv{
+  display: flex;
+  justify-content: center;
+}
+
+.submit-button {
+  display: block;
+  align-self: center;
+  width: 100%;
+  padding: 1rem;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border-radius: .5rem;
+  cursor: pointer;
+  border: none;
+  font-size: 2rem;
+}
+
+.submit-button:hover {
+  color: white;
+  background-color: rgb(100, 100, 100);
+  
+}
+
+.form-group {
+  margin-bottom: 2rem;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: 3rem;
+  padding: .75rem 1rem;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.input-textarea {
+  min-height: 120px;
+  width: 100%;
+  resize: vertical;
+  border-radius: 5px;
+  font-size: 2rem;
+  font-family: inherit;
+}
+
+.returnMessage{
+  font-size: 3.5rem
+}
+
+
+/* Gallery */
+.gallery {
+  color: #000000;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.galleryPhotos {
+  width: 98%;
+  height: 500px;
+  background: white;
+  margin: 10px auto;
+  display: flex ;
+  justify-content: left;
+  align-items: center;
+  overflow-x: auto;
+  gap: 20px;
+  border: solid 1px;
+}
+
+.galleryPhotos::-webkit-scrollbar {
+  visibility: hidden;
 }
