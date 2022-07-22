@@ -14,21 +14,21 @@ const ContactPage = () => {
           <h3>CONTACT US</h3>
           <ul>
             <li>
-              <a href="mailto: jockoboards@gmail.com">
+              <a href="mailto: jockoboards@gmail.com" target='_blank' rel="noreferrer">
                 <div className='contact-icons'>
                   <AiOutlineMail />Jockoboards@gmail.com
                 </div>
               </a>
             </li>
             <li>
-              <a href="tel:4065294442">
+              <a href="tel:4065294442" target='_blank' rel="noreferrer">
                 <div className='contact-icons'>
                   <FaPhoneAlt />(406) 529-4442
                 </div>
               </a>
             </li>
             <li>
-              <a href="https://www.instagram.com/jockoboards/">
+              <a href="https://www.instagram.com/jockoboards/" target='_blank' rel="noreferrer">
                 <div className='contact-icons'>
                   <FaInstagram />
                   @jockoboards

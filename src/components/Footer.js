@@ -4,15 +4,23 @@ import { AiOutlineMail } from 'react-icons/ai'
 
 const Footer = () => {
   return (
-      <footer>
-        
+    <footer>
 
-        <div className='footer-row'>
+
+      <div className='footer-row'>
+        <div className='footerOrder'>
           <p className="copyright">JOCKO SURFBOARDS © 2022</p>
+        </div>
 
+        <div className='footerOrder'>
           <p className="copyright">
-            <a href="atlasmckinley.com">Site by Atlas McKinley</a>
+            <a href="https://www.atlasmckinley.com" target='_blank' rel="noreferrer">
+              Site by Atlas McKinley
+            </a>
           </p>
+        </div>
+
+        <div className='footerOrder'>
           <ul className='footer-logos-ul'>
             <li>
               <a href="mailto: jockoboards@gmail.com"> <AiOutlineMail /></a>
@@ -27,7 +35,10 @@ const Footer = () => {
         </div>
 
 
-      </footer>
+      </div>
+
+
+    </footer>
   )
 }
 

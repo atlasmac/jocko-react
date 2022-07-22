@@ -4,7 +4,7 @@ const Message = () => {
   return (
     <div className='lochsa'>
       <div>
-        <h2>Custom made for the surfer and wave.</h2>
+        <h2>Custom made for the surfer and the wave.</h2>
       </div>
     </div>
   )

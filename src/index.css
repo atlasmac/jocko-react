@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
 /* Box Model Hack */
-*{
+* {
   box-sizing: border-box;
 }
 
@@ -44,6 +44,10 @@ a:hover {
   text-decoration: none;
   color: white;
   font-weight: bold;
+}
+
+.main-nav li>a:hover {
+  color: #adadad;
 }
 
 .main-nav li {
@@ -94,28 +98,31 @@ a:hover {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  z-index: -1;
 }
 
 .main-section div {
   text-align: center;
+  min-width: 300px;
+  max-width: 500px;
+  margin: 4rem;
+  z-index: 1000;
 }
 
 .message {
   color: white;
   font-weight: bold;
-  font-size: 4rem;
+  font-size: 4.1rem;
   text-align: center;
-  text-shadow: 10px;
-  color: rgba(255, 255, 255, 0.);
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
 }
 
 
-.brand-logo-name-img-main {
+/* .brand-logo-name-img-main {
   height: 100px;
   display: none;
   width: auto;
-}
+} */
 
 
 /* 2nd background */
@@ -172,14 +179,14 @@ footer a:hover {
   color: #adadad;
 }
 
-.footer-row{
+.footer-row {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
 }
 
-.footer-logos-ul{
+.footer-logos-ul {
   display: flex;
   align-items: center;
   gap: 3rem;
@@ -197,13 +204,14 @@ footer a:hover {
   margin: 0;
 
 }
+
 /* contact page */
 .contactPage {
   background-color: rgb(255, 255, 255);
   width: 100%;
-  height: 100vh;
+  min-height: 70vh;
   margin: 0 auto;
-  padding: 0;
+  padding: 5rem 2rem;
   color: black;
   display: flex;
   align-items: center;
@@ -231,6 +239,7 @@ footer a:hover {
   text-decoration: none;
   color: #000000;
 }
+
 .contactDiv a:hover {
   color: #adadad;
 }
@@ -258,9 +267,7 @@ footer a:hover {
 
 
 /* form */
-input{
-  font-size: 2rem;
-}
+
 
 fieldset {
   padding: 0;
@@ -269,21 +276,11 @@ fieldset {
   justify-content: space-between;
 }
 
-.contactPage fieldset div{
+.contactPage fieldset div {
   width: 49%;
 }
 
-
-label {
-  display: block;
-  align-items: center;
-  font-size: 2rem;
-  margin-top: 0.5rem;
-  margin-bottom: 0.25rem;
-}
-
-
-.buttonDiv{
+.buttonDiv {
   display: flex;
   justify-content: center;
 }
@@ -299,12 +296,13 @@ label {
   cursor: pointer;
   border: none;
   font-size: 2rem;
+  font-weight: bold;
 }
 
 .submit-button:hover {
   color: white;
   background-color: rgb(100, 100, 100);
-  
+
 }
 
 .form-group {
@@ -312,6 +310,7 @@ label {
 }
 
 .form-control {
+  font-size: 2rem;
   display: block;
   width: 100%;
   height: 3rem;
@@ -333,12 +332,14 @@ label {
   font-family: inherit;
 }
 
-.returnMessage{
+.returnMessage {
   font-size: 3.5rem
 }
 
 
 /* Gallery */
+/* <!-- https://www.youtube.com/watch?v=vrAftV1XcNc --> */
+
 .gallery {
   color: #000000;
   width: 100%;
@@ -351,14 +352,82 @@ label {
   height: 500px;
   background: white;
   margin: 10px auto;
-  display: flex ;
+  display: flex;
   justify-content: left;
   align-items: center;
   overflow-x: auto;
   gap: 20px;
-  border: solid 1px;
 }
 
 .galleryPhotos::-webkit-scrollbar {
   visibility: hidden;
+}
+
+.photoDiv img {
+  height: 400px;
+  width: auto;
+  left: 0;
+  text-align: center;
+  /* margin: 10px 10px; */
+  color: #000000;
+  transition: 0.5s;
+  display: block;
+  border-radius: 5px;
+}
+
+.errorPage{
+  background-image: url("./images/surfing1.jpeg");
+
+  background-position: 0% 70%;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  /* aligning the text in the paralax */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.errorPage h1 {
+  font-size: 5rem;
+  color: rgba(255, 255, 255);
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* media queries */
+
+
+@media screen and (max-width: 800px) {
+  .footer-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .footerOrder:nth-child(1) {
+    order: 3;
+  }
+  .footerOrder:nth-child(2) {
+    order: 2;
+  }
+  .footerOrder:nth-child(3) {
+    order: 1;
+  }
+}
+
+@media screen and (max-width: 660px) {
+.form-control, .input-textarea {
+  font-size: 1.7rem;
+}
+
+.main-nav ul{
+  gap: 2rem;
+}
+
+.lochsa{
+  background-position: 100% 30%;
+}
+
 }

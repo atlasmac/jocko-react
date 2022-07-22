@@ -1,14 +1,15 @@
 import React from 'react';
 import logo from '../images/JockoWhite.png'
-import {GiHamburgerMenu} from 'react-icons/gi'
+// import {GiHamburgerMenu} from 'react-icons/gi'
+import { HashLink } from 'react-router-hash-link';
 
 
 
 
 const Header = () => {
   const [isHeaderActive, setIsHeaderActive] = React.useState(false);
-  
-  function handleScroll () {
+
+  function handleScroll() {
     window.scrollY > 1 ? setIsHeaderActive(true) : setIsHeaderActive(false);
   }
   React.useEffect(() => {
@@ -16,12 +17,12 @@ const Header = () => {
   }, []);
   return (
     <header className={`main-header ${isHeaderActive ? 'sticky' : ''}`}>
-      <a href='/'>
+      <HashLink to='/#home' smooth>
         <img src={logo} alt="logo" className="brand-logo-name-img" />
-      </a>
+      </HashLink>
       <nav className='main-nav'>
         <ul>
-          <li className='dropdown'>
+          {/* <li className='dropdown'>
               <button className='link hamburger'>
                 <GiHamburgerMenu />
               </button>
@@ -33,10 +34,17 @@ const Header = () => {
                   <a href='/'>Contact</a>
                 </div>
               </div>
+          </li> */}
+          <li>
+            <HashLink to="/#gallery" smooth>
+              Gallery
+            </HashLink>
           </li>
-
-          <li className="goAway"><a href="/">GALLERY</a></li>
-          <li className="goAway"><a href="/">CONTACT</a></li>
+          <li>
+            <HashLink to="/#contact" smooth>
+              Contact
+            </HashLink>
+          </li>
         </ul>
       </nav>
     </header>
