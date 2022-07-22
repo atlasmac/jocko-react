@@ -16,6 +16,15 @@ import surfing2 from '../images/surfing2.jpeg'
 
 
 const Gallery = () => {
+  const [scroll, setScroll] = React.useState(false)
+
+  function hoverHandle(){
+    setScroll(true)
+  }
+  function hoverLeave(){
+    setScroll(false)
+  }
+
   const galleryUrls = [photo4, surfing2, photo2, shaping1, photo1, surfing1, shaping2, shaping3, shaping4, photo3, shaping5]
   const gallery = galleryUrls.map((photo, i, arr)=>{
     return (
@@ -27,7 +36,7 @@ const Gallery = () => {
   })
   return (
     <div  id='gallery' className='gallery'>
-      <section className='galleryPhotos'>
+      <section className={`galleryPhotos  ${scroll ? 'galleryPhotosScroll': ''}`} onMouseEnter={hoverHandle} onMouseLeave={hoverLeave}>
         {gallery}
         <div></div>
       </section>
