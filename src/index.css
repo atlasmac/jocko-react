@@ -349,9 +349,8 @@ fieldset {
 
 .galleryPhotos {
   width: 98%;
-  height: 500px;
   background: white;
-  margin: 10px auto;
+  margin: 50px auto;
   display: flex;
   justify-content: left;
   align-items: center;
@@ -360,7 +359,23 @@ fieldset {
 }
 
 .galleryPhotos::-webkit-scrollbar {
-  visibility: hidden;
+  visibility:visible;
+  width: 1px;
+}
+/* Track */
+.galleryPhotos::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.galleryPhotos::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+.galleryPhotos::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 .photoDiv img {
@@ -373,6 +388,7 @@ fieldset {
   transition: 0.5s;
   display: block;
   border-radius: 5px;
+  margin-bottom:10px ;
 }
 
 .errorPage{
