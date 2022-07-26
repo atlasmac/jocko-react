@@ -199,10 +199,15 @@ footer a:hover {
 
 .copyright {
   text-align: center;
+  font-weight: lighter;
   font-size: 1.5rem;
   padding: 0;
   margin: 0;
 
+}
+
+.boldName{
+  font-weight: bold;
 }
 
 /* contact page */

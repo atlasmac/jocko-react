@@ -14,8 +14,9 @@ const Footer = () => {
 
         <div className='footerOrder'>
           <p className="copyright">
+            Site by
             <a href="https://www.atlasmckinley.com" target='_blank' rel="noreferrer">
-              Site by Atlas McKinley
+              <span className='boldName'> Atlas McKinley</span>
             </a>
           </p>
         </div>
