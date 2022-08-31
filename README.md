@@ -1,3 +1,18 @@
+# Jocko Surfboards
+
+This is a freelance project for a surboard shaper. It features a gallery, social media and a contact form.
+
+# Tech Used
+
+React, Formspree React, React Icons, React Router Dom, React Router Hash Link
+
+# Getting Started
+
+npm install
+npm start 
+
+**Link to project:** http://www.jockoboards.com/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
